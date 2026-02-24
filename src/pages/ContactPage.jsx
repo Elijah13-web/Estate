@@ -200,7 +200,7 @@ const ContactPage = () => {
                   },
                   {
                     Icon: Mail,
-                    text: "marksonajiboyeconsulting@gmail.com",
+                    text: "marksonajiboye@gmail.com",
                   },
                 ].map(({ Icon, text }, i) => (
                   <div key={i} className="flex items-start gap-4 group">
