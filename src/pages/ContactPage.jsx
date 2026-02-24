@@ -170,7 +170,7 @@ const ContactPage = () => {
 
   /* ================= UI ================= */
   return (
-    <div className="min-h-screen pt-20  via-[#faf7ef] to-white overflow-hidden">
+    <div className="min-h-screen pt-10  via-[#faf7ef] to-white overflow-hidden">
       <section className="py-24 font-serif">
         <div className="container mx-auto p-6 lg:px-0">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
@@ -196,12 +196,19 @@ const ContactPage = () => {
                   },
                   {
                     Icon: Phone,
-                    text: "0802 294 7444 • 0810 475 6324",
+                    text: "0802 294 7444 / 0810 475 6324",
                   },
                   {
-                    Icon: Mail,
-                    text: "marksonajiboye@gmail.com",
-                  },
+  Icon: Mail,
+  text: (
+    <a
+      href="mailto:marksonajiboye@gmail.com"
+      className="text-muted-foreground hover:text-[#d09d1e] transition-colors"
+    >
+      marksonajiboye@gmail.com
+    </a>
+  ),
+} 
                 ].map(({ Icon, text }, i) => (
                   <div key={i} className="flex items-start gap-4 group">
                     <div className="p-3 rounded-full bg-[#d09d1e]/10 shadow-sm">
@@ -295,7 +302,7 @@ const ContactPage = () => {
       </section>
 
       {/* ===== GOOGLE MAP ===== */}
-      <section className="mt-20 px-6 pb-24">
+      <section className=" px-6 pb-24">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold text-[#0f172a] font-serif">
