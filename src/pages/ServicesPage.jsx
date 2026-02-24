@@ -1,41 +1,210 @@
-import { Building2, TrendingUp, Landmark, BarChart3, Gavel, HandshakeIcon, ClipboardCheck, Home } from "lucide-react";
+import {
+  Building2,
+  TrendingUp,
+  Landmark,
+  BarChart3,
+  Gavel,
+  HandshakeIcon,
+  ClipboardCheck,
+  Home,
+} from "lucide-react";
+import { useLocation } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
 
 const services = [
-  { icon: Building2, title: "Real Estate Development", items: ["Residential, commercial & mixed-use development", "Feasibility & viability studies", "Highest and best use analysis", "Joint venture & PPP advisory", "Land acquisition advisory"] },
-  { icon: Landmark, title: "Project Management", items: ["Construction planning & coordination", "Cost control & budgeting", "Contractor supervision", "Quality & risk management", "Timely project delivery"] },
-  { icon: TrendingUp, title: "Property Valuation", items: ["Residential, commercial & industrial valuation", "Mortgage & loan security valuation", "Insurance valuation", "Compensation & acquisition valuation", "Valuation for financial reporting"] },
-  { icon: BarChart3, title: "Property Consultancy & Advisory", items: ["Investment advisory", "Market research & analysis", "Portfolio optimization", "Acquisition & disposal advisory"] },
-  { icon: ClipboardCheck, title: "Estate Surveying", items: ["Land & property surveying", "Boundary identification", "Site appraisal & land use analysis", "Development control advisory"] },
-  { icon: Gavel, title: "Arbitration & Dispute Resolution", items: ["Property-related arbitration", "Rent & lease disputes", "Compensation assessment", "Expert witness services"] },
-  { icon: HandshakeIcon, title: "Auctioneering Services", items: ["Property auctions", "Asset disposal", "Foreclosure & distressed property sales", "Public and private auction services"] },
-  { icon: Home, title: "Property Management", items: ["Lease administration", "Rent collection & review", "Tenant management", "Facility coordination & maintenance supervision"] },
+  {
+    icon: Building2,
+    title: "Real Estate Development",
+    items: [
+      "Residential, commercial & mixed-use development",
+      "Feasibility & viability studies",
+      "Highest and best use analysis",
+      "Joint venture & PPP advisory",
+      "Land acquisition advisory",
+    ],
+  },
+  {
+    icon: Landmark,
+    title: "Project Management",
+    items: [
+      "Construction planning & coordination",
+      "Cost control & budgeting",
+      "Contractor supervision",
+      "Quality & risk management",
+      "Timely project delivery",
+    ],
+  },
+  {
+    icon: TrendingUp,
+    title: "Property Valuation",
+    items: [
+      "Residential, commercial & industrial valuation",
+      "Mortgage & loan security valuation",
+      "Insurance valuation",
+      "Compensation & acquisition valuation",
+      "Valuation for financial reporting",
+    ],
+  },
+  {
+    icon: BarChart3,
+    title: "Property Consultancy",
+    items: [
+      "Investment advisory",
+      "Market research & analysis",
+      "Portfolio optimization",
+      "Acquisition & disposal advisory",
+    ],
+  },
+  {
+    icon: ClipboardCheck,
+    title: "Estate Surveying",
+    items: [
+      "Land & property surveying",
+      "Boundary identification",
+      "Site appraisal & land use analysis",
+      "Development control advisory",
+    ],
+  },
+  {
+    icon: Gavel,
+    title: "Arbitration & Dispute Resolution",
+    items: [
+      "Property-related arbitration",
+      "Rent & lease disputes",
+      "Compensation assessment",
+      "Expert witness services",
+    ],
+  },
+  {
+    icon: HandshakeIcon,
+    title: "Auctioneering Services",
+    items: [
+      "Property auctions",
+      "Asset disposal",
+      "Foreclosure & distressed property sales",
+      "Public and private auction services",
+    ],
+  },
+  {
+    icon: Home,
+    title: "Property Management",
+    items: [
+      "Lease administration",
+      "Rent collection & review",
+      "Tenant management",
+      "Facility coordination & maintenance supervision",
+    ],
+  },
 ];
 
 const ServicesPage = () => {
+  const location = useLocation();
+  const serviceRefs = useRef({});
+  const [activeService, setActiveService] = useState(null);
+
+  // 🔥 detect clicked service
+  useEffect(() => {
+    const stateService = location.state?.service;
+    const hashService = decodeURIComponent(
+      location.hash.replace("#", "")
+    );
+
+    const target = stateService || hashService || null;
+
+    if (target) {
+      setActiveService(target);
+
+      setTimeout(() => {
+        serviceRefs.current[target]?.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+        });
+      }, 200);
+    }
+  }, [location]);
+
   return (
     <div className="min-h-screen bg-background pt-20 font-serif">
       <section className="py-24">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="text-center mb-16 max-w-2xl mx-auto">
-            <p className="text-sm font-semibold uppercase tracking-widest text-[#937723] mb-4">What We Do</p>
-            <h1 className="text-3xl md:text-4xl font-bold   mb-4">Our Services</h1>
-            <p className=" text-[#7a706a]">Comprehensive real estate solutions across valuation, development, project management, and dispute resolution.</p>
+            <p className="text-sm font-semibold uppercase tracking-widest text-[#937723] mb-4">
+              What We Do
+            </p>
+            <h1 className="text-3xl md:text-4xl font-bold mb-4">
+              Our Services
+            </h1>
+            <p className="text-[#7a706a]">
+              Comprehensive real estate solutions across valuation,
+              development, project management, and dispute resolution.
+            </p>
           </div>
+
           <div className="grid md:grid-cols-2 gap-8">
-            {services.map((service) => (
-              <div key={service.title} className="p-8 border border-border rounded-lg bg-card hover:shadow-xl cursor-pointer transition-shadow">
-                <service.icon className="w-10 h-10 text-[#937723] mb-4" strokeWidth={1.5} />
-                <h2 className="text-xl font-bold mb-4">{service.title}</h2>
-                <ul className="space-y-2">
-                  {service.items.map((item) => (
-                    <li key={item} className="text-muted-foreground text-sm flex items-start gap-2">
-                      <span className="text-[#937723] mt-1">•</span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+            {services.map((service) => {
+              const isActive = activeService === service.title;
+
+              return (
+                <div
+                  key={service.title}
+                  ref={(el) =>
+                    (serviceRefs.current[service.title] = el)
+                  }
+                  onClick={() =>
+                    setActiveService(
+                      isActive ? null : service.title
+                    )
+                  }
+                  className={`group relative p-8 rounded-xl cursor-pointer transition-all duration-500 overflow-hidden
+                    ${
+                      isActive
+                        ? "ring-2 ring-[#937723] shadow-[0_25px_60px_rgba(147,119,35,0.25)] bg-gradient-to-br from-white to-[#fffaf0]"
+                        : "border border-border bg-card hover:shadow-xl hover:-translate-y-1"
+                    }`}
+                >
+                  {/* shimmer */}
+                  <div
+                    className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700 bg-gradient-to-r from-transparent via-[#937723]/10 to-transparent ${
+                      isActive ? "opacity-100 animate-pulse" : ""
+                    }`}
+                  />
+
+                  <service.icon
+                    className="w-10 h-10 text-[#937723] mb-4 relative z-10"
+                    strokeWidth={1.5}
+                  />
+
+                  <h2 className="text-xl font-bold mb-4 relative z-10">
+                    {service.title}
+                  </h2>
+
+                  {/* accordion */}
+                  <ul
+                    className={`space-y-2 overflow-hidden transition-all duration-500 relative z-10 ${
+                      isActive
+                        ? "max-h-96 opacity-100"
+                        : "max-h-0 opacity-0"
+                    }`}
+                  >
+                    {service.items.map((item) => (
+                      <li
+                        key={item}
+                        className="text-muted-foreground text-sm flex items-start gap-2"
+                      >
+                        <span className="text-[#937723] mt-1">•</span>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+
+                  {!isActive && (
+                    <p className="text-xs text-[#937723] mt-2 font-medium">
+                      Click to view details →
+                    </p>
+                  )}
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
