@@ -167,7 +167,7 @@ const ServicesPage = () => {
   }, [location]);
 
   return (
-    <div className="min-h-screen bg-background pt-20 font-serif">
+    <div className="min-h-screen bg-background pt-20 ">
       <section className="py-24">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="text-center mb-16 max-w-2xl mx-auto">

@@ -32,7 +32,7 @@ const services = [
 const HomeServices = () => {
   return (
     <section className="pb-20">
-      <div className="container mx-auto px-6 lg:px-8 font-serif">
+      <div className="container mx-auto px-6 lg:px-8 ">
         <div className="text-center mb-16">
           <p className="uppercase text-[#937723] tracking-widest mb-4 font-medium text-lg">
             What We Do

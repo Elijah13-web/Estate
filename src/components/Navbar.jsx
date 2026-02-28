@@ -26,7 +26,7 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-[#092b42]">
-      <div className="container mx-auto flex items-center justify-between h-30 px-6 font-serif">
+      <div className="container mx-auto flex items-center justify-between h-30 px-3">
         
         <Link
           to="/"
@@ -34,7 +34,7 @@ const Navbar = () => {
           className=""
         >
           <div className="flex space-x-4 items-center">
-            <img src={logo} alt="Markson Ajiboye Logo" className="h-20 w-20 rounded-full mb-1" />
+            <img src={logo} alt="Markson Ajiboye Logo" className="h-24 w-24 rounded-full mb-1" />
           <div className="flex flex-col">
             <span className="text-xl font-bold tracking-tight text-[#0c1c2b]">
             Markson Ajiboye
