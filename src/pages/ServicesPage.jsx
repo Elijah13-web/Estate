@@ -7,6 +7,10 @@ import {
   HandshakeIcon,
   ClipboardCheck,
   Home,
+  FileText,
+  Briefcase,
+  Settings,
+  LineChart,
 } from "lucide-react";
 import { useLocation } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
@@ -17,10 +21,53 @@ const services = [
     title: "Real Estate Development",
     items: [
       "Residential, commercial & mixed-use development",
-      "Feasibility & viability studies",
       "Highest and best use analysis",
       "Joint venture & PPP advisory",
       "Land acquisition advisory",
+    ],
+  },
+  {
+    icon: FileText,
+    title: "Real Estate Documentation",
+    items: [
+      "Title search and due diligence",
+      "Preparation of deed of assignment",
+      "Governor’s consent processing",
+      "Lease and tenancy documentation",
+      "Property legal compliance support",
+    ],
+  },
+  {
+    icon: Briefcase,
+    title: "Property Advisory",
+    items: [
+      "Strategic real estate advisory",
+      "Investment decision support",
+      "Market entry strategy",
+      "Risk assessment and mitigation",
+      "Portfolio growth planning",
+    ],
+  },
+  {
+    icon: LineChart,
+    title: "Feasibility & viability Appraisal",
+    items: [
+      "Development feasibility studies",
+      "Financial viability modeling",
+      "Risk and sensitivity analysis",
+      "Market demand assessment",
+      "Investment decision support",
+    ],
+  },
+  {
+    icon: Settings,
+    title: "Facility Management",
+    items: [
+      "Integrated facility operations",
+      "Preventive maintenance planning",
+      "Vendor and contractor management",
+      "Health and safety compliance",
+      "Operational cost optimization",
     ],
   },
   {
@@ -47,7 +94,7 @@ const services = [
   },
   {
     icon: BarChart3,
-    title: "Property Consultancy",
+    title: "Real Estate Portfolio Advisory",
     items: [
       "Investment advisory",
       "Market research & analysis",
@@ -67,7 +114,7 @@ const services = [
   },
   {
     icon: Gavel,
-    title: "Arbitration & Dispute Resolution",
+    title: "Real Estate Arbitration & Dispute Resolution",
     items: [
       "Property-related arbitration",
       "Rent & lease disputes",
@@ -77,7 +124,7 @@ const services = [
   },
   {
     icon: HandshakeIcon,
-    title: "Auctioneering Services",
+    title: "Real Estate Auctioneering Services",
     items: [
       "Property auctions",
       "Asset disposal",
@@ -102,13 +149,9 @@ const ServicesPage = () => {
   const serviceRefs = useRef({});
   const [activeService, setActiveService] = useState(null);
 
-  // 🔥 detect clicked service
   useEffect(() => {
     const stateService = location.state?.service;
-    const hashService = decodeURIComponent(
-      location.hash.replace("#", "")
-    );
-
+    const hashService = decodeURIComponent(location.hash.replace("#", ""));
     const target = stateService || hashService || null;
 
     if (target) {
@@ -140,27 +183,23 @@ const ServicesPage = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             {services.map((service) => {
               const isActive = activeService === service.title;
 
               return (
                 <div
                   key={service.title}
-                  ref={(el) =>
-                    (serviceRefs.current[service.title] = el)
-                  }
+                  ref={(el) => (serviceRefs.current[service.title] = el)}
                   onClick={() =>
-                    setActiveService(
-                      isActive ? null : service.title
-                    )
+                    setActiveService(isActive ? null : service.title)
                   }
-                  className={`group relative p-8 rounded-xl cursor-pointer transition-all duration-500 overflow-hidden
-                    ${
-                      isActive
-                        ? "ring-2 ring-[#937723] shadow-[0_25px_60px_rgba(147,119,35,0.25)] bg-gradient-to-br from-white to-[#fffaf0]"
-                        : "border border-border bg-card hover:shadow-xl hover:-translate-y-1"
-                    }`}
+                  className={`group relative p-6 rounded-xl cursor-pointer transition-all duration-500 overflow-hidden
+                  ${
+                    isActive
+                      ? "ring-2 ring-[#937723] shadow-[0_25px_60px_rgba(147,119,35,0.25)] bg-gradient-to-br from-white to-[#fffaf0] scale-[1.02]"
+                      : "border border-border bg-card hover:shadow-xl hover:-translate-y-1"
+                  }`}
                 >
                   {/* shimmer */}
                   <div
@@ -178,12 +217,9 @@ const ServicesPage = () => {
                     {service.title}
                   </h2>
 
-                  {/* accordion */}
                   <ul
                     className={`space-y-2 overflow-hidden transition-all duration-500 relative z-10 ${
-                      isActive
-                        ? "max-h-96 opacity-100"
-                        : "max-h-0 opacity-0"
+                      isActive ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
                     }`}
                   >
                     {service.items.map((item) => (
