@@ -202,10 +202,10 @@ const ContactPage = () => {
   Icon: Mail,
   text: (
     <a
-      href="mailto:marksonajiboye@gmail.com"
+      href="mailto:marksonajiboyeconsultingservic@gmail.com"
       className="text-muted-foreground hover:text-[#d09d1e] transition-colors"
     >
-      marksonajiboye@gmail.com
+   marksonajiboyeconsultingservic@gmail.com
     </a>
   ),
 } 
@@ -261,14 +261,18 @@ const ContactPage = () => {
                 ${errors.service ? "border-red-500" : "border-slate-200"}`}
               >
                 <option value="">Service Required</option>
-                <option value="valuation">Property Valuation</option>
+                <option value="advisory">Property Advisory</option>
                 <option value="consultancy">Property Consultancy</option>
+                <option value="valuation">Property Valuation</option>
                 <option value="management">Property Management</option>
                  <option value="development">Real Estate Development</option>
-                 <option value="surveying">Estate Surveying</option>
-              <option value="arbitration">Arbitration</option>
-               <option value="auctioneering">Auctioneering</option>
-              <option value="management">Property Management</option>
+                   <option value="documentation">Real Estate Documentation</option>
+              <option value="arbitration">Real Estate Arbitration & Dispute Resolution</option>
+               <option value="auctioneering">Real Estate Auctioneering Services</option>
+               <option value="portfolio">Real Estate Portfolio Advisory</option>
+              <option value="facility">Facility Management</option>
+              <option value="feasibility">Feasibility & viability Appraisal</option>
+              <option value="surveying">Estate Surveying</option>
 
               </select>
 

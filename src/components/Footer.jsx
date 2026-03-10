@@ -27,14 +27,18 @@ const Footer = () => {
               Services
             </h4>
             <ul className="space-y-2 text-xl cursor-pointer text-[#d7e6f0]">
-              <li>Real Estate Development</li>
+             <li>Property Advisory</li>
+              <li>Property Consultancy</li>
               <li>Project Management</li>
               <li>Property Valuation</li>
-              <li>Property Consultancy</li>
-              <li>Arbitration & Dispute Resolution</li>
-              <li>Auctioneering Services</li>
-              <li>Estate Surveying</li>
-              <li>Property Management</li>
+               <li>Real Estate Development</li>
+               <li>Real Estate Documentation</li>
+               <li>Real Estate Arbitration & Dispute Resolution</li>
+               <li>Real Estate Auctioneering Services</li>
+              <li>Real Estate Portfolio Advisory</li>
+              <li>Facility Management</li>
+              <li>Feasibility & viability Appraisal</li>
+               <li>Estate Surveying</li>
             </ul>
           </div>
 
@@ -47,10 +51,10 @@ const Footer = () => {
               <li>0802 294 7444 | 0810 475 6324</li>
               <li>
                 <a
-                  href="mailto:marksonajiboye@gmail.com"
+                  href="mailto:marksonajiboyeconsultingservic@gmail.com"
                   className="underline hover:text-accent"
                 >
-                  marksonajiboye@gmail.com
+                  marksonajiboyeconsultingservic@gmail.com
                 </a>
               </li>
             </ul>
