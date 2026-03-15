@@ -170,7 +170,7 @@ const ContactPage = () => {
 
   /* ================= UI ================= */
   return (
-    <div className="min-h-screen pt-10  via-[#faf7ef] to-white overflow-hidden">
+    <div className="min-h-screen pt-10  via-[#faf7ef] to-white">
       <section className="py-24 font-serif">
         <div className="container mx-auto p-6 lg:px-0">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
