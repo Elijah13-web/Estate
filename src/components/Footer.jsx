@@ -54,7 +54,7 @@ const Footer = () => {
                   href="mailto:marksonajiboyeconsultingservic@gmail.com"
                   className="underline hover:text-accent"
                 >
-                  marksonajiboyeconsultingservic@gmail.com
+                  marksonajiboyeconsulting@gmail.com
                 </a>
               </li>
             </ul>

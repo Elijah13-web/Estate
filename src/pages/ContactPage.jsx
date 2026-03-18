@@ -205,7 +205,7 @@ const ContactPage = () => {
       href="mailto:marksonajiboyeconsultingservic@gmail.com"
       className="text-muted-foreground hover:text-[#d09d1e] transition-colors"
     >
-   marksonajiboyeconsultingservic@gmail.com
+   marksonajiboyeconsulting@gmail.com
     </a>
   ),
 } 
