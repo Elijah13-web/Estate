@@ -15,7 +15,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-12">
           <div className="space-y-4">
             <h3 className="text- font-bold uppercase  text-[#937723]">
-              Markson Ajiboye Consulting Services
+              Markson Ajiboye Consulting
             </h3>
             <p className="text-xl text-[#d7e6f0]">
               Estate Surveyors, Valuers & Property Consultants. Delivering reliable, data-driven, and ethical real estate solutions across Nigeria.

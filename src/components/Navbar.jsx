@@ -40,7 +40,7 @@ const Navbar = () => {
             Markson Ajiboye
           </span>
           <span className="text-[10px] uppercase tracking-widest text-[#937723] font-semibold">
-            Consulting Services
+            Consulting 
           </span>
           </div>
           </div>

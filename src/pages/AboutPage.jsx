@@ -17,7 +17,7 @@ const AboutPage = () => {
           <p className="text-sm font-semibold uppercase  text-[#937723] mb-4">Who We Are</p>
           <h1 className="text-3xl md:text-4xl font-bold  mb-8">About Our Firm</h1>
           <p className="text-muted-foreground leading-relaxed text-[#7a706a] text-lg mb-6">
-            Markson Ajiboye Consulting Services is a multidisciplinary real estate consultancy firm offering professional services in estate surveying, property valuation, real estate development, project management, property consultancy, arbitration, auctioneering, and property management.
+            Markson Ajiboye Consulting is a multidisciplinary real estate consultancy firm offering professional services in estate surveying, property valuation, real estate development, project management, property consultancy, arbitration, auctioneering, and property management.
           </p>
           <p className="text-muted-foreground leading-relaxed text-[#7a706a] text-lg">
             We deliver reliable, data-driven, and ethical real estate solutions that support informed decision-making, value creation, and dispute resolution across Nigeria.
