@@ -196,7 +196,7 @@ const ContactPage = () => {
                   },
                   {
                     Icon: Phone,
-                    text: "0802 294 7444 / 0810 475 6324",
+                    text: "07089651430 / 08133890026",
                   },
                   {
   Icon: Mail,

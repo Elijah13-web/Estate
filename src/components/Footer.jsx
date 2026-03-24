@@ -48,7 +48,7 @@ const Footer = () => {
             </h4>
             <ul className="space-y-2 md:text-lg text-sm text-[#d7e6f0]">
               <li>126, Obafemi Awolowo Way, Ikeja, Lagos</li>
-              <li>0802 294 7444 | 0810 475 6324</li>
+              <li>07089651430 / 08133890026</li>
               <li>
                 <a
                   href="mailto:marksonajiboyeconsultingservic@gmail.com"
