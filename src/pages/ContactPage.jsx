@@ -203,7 +203,7 @@ const ContactPage = () => {
   text: (
     <a
       href="mailto:marksonajiboyeconsulting@gmail.com"
-      className="text-muted-foreground hover:text-[#d09d1e] transition-colors"
+      className="text-muted-foreground hover:text-[#d09d1e] transition-colors text-sm"
     >
    marksonajiboyeconsulting@gmail.com
     </a>
