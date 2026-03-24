@@ -188,7 +188,7 @@ const ContactPage = () => {
                 We are available to discuss your property needs and provide professional advisory support.
               </p>
 
-              <div className="space-y-6 pt-6">
+              <div className="space-y-6 pt-6 text-sm md:text-lg text-[#7a706a]">
                 {[
                   {
                     Icon: MapPin,
@@ -203,7 +203,7 @@ const ContactPage = () => {
   text: (
     <a
       href="mailto:marksonajiboyeconsulting@gmail.com"
-      className="text-muted-foreground hover:text-[#d09d1e] transition-colors text-sm"
+      className="text-muted-foreground hover:text-[#d09d1e] transition-colors"
     >
    marksonajiboyeconsulting@gmail.com
     </a>
@@ -212,7 +212,7 @@ const ContactPage = () => {
                 ].map(({ Icon, text }, i) => (
                   <div key={i} className="flex items-start gap-4 group">
                     <div className="p-3 rounded-full bg-[#d09d1e]/10 shadow-sm">
-                      <Icon className="w-5 h-5 text-[#d09d1e]" strokeWidth={2.4} />
+                      <Icon className="md:w-5 md:h-5 w-3 h-3 text-[#d09d1e]" strokeWidth={2.4} />
                     </div>
                     <p className="text-muted-foreground">{text}</p>
                   </div>
