@@ -17,16 +17,16 @@ const Footer = () => {
             <h3 className="text- font-bold uppercase  text-[#937723]">
               Markson Ajiboye Consulting
             </h3>
-            <p className="text-xl text-[#d7e6f0]">
+            <p className="md:text-xl text-lg  text-[#d7e6f0]">
               Estate Surveyors, Valuers & Property Consultants. Delivering reliable, data-driven, and ethical real estate solutions across Nigeria.
             </p>
           </div>
 
           <div className="space-y-4">
-            <h4 className="text-xl font-semibold uppercase  text-[#937723]">
+            <h4 className="md:text-xl text-lg  font-semibold uppercase  text-[#937723]">
               Services
             </h4>
-            <ul className="space-y-2 text-xl cursor-pointer text-[#d7e6f0]">
+            <ul className="space-y-2 md:text-xl text-lg cursor-pointer text-[#d7e6f0]">
              <li>Property Advisory</li>
               <li>Property Consultancy</li>
               <li>Project Management</li>
@@ -46,7 +46,7 @@ const Footer = () => {
             <h4 className="text-xl font-semibold uppercase  text-[#937723]">
               Contact
             </h4>
-            <ul className="space-y-2 text-xl text-[#d7e6f0]">
+            <ul className="space-y-2 md:text-lg text-lg text-[#d7e6f0]">
               <li>126, Obafemi Awolowo Way, Ikeja, Lagos</li>
               <li>0802 294 7444 | 0810 475 6324</li>
               <li>

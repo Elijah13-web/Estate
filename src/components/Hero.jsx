@@ -13,9 +13,7 @@ const Hero = () => {
             </div>
             <p className="text-lg text-muted-foreground text-[#7a706a] leading-relaxed max-w-lg">We provide professional real estate advisory, valuation, development, and dispute resolution services tailored to the Nigerian property market.</p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button asChild size="lg" className=" font-semibold bg-[#d09d1e] hover:bg-[#ffb702] cursor-pointer ">
-                <Link to="/contact">Request a Valuation</Link>
-              </Button>
+          
               <Button asChild size="lg" variant="outline" className="hover:bg-[#0c1c2b] hover:text-white font-semibold px-8">
                 <Link to="/contact">Speak to a Consultant</Link>
               </Button>

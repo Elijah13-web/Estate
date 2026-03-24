@@ -11,7 +11,7 @@ import DocumentsPage from "./pages/DocumentsPage.jsx";
 
 function App() {
   return (
-    <div className="min-h-screen flex flex-col font-serif mx-auto container">
+    <div className=" overflow-hidden font-serif mx-auto container ">
       <ScrollToTop />
 
       <main className="flex-grow">

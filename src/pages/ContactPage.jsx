@@ -172,7 +172,7 @@ const ContactPage = () => {
   return (
     <div className="min-h-screen pt-10  via-[#faf7ef] to-white">
       <section className="py-24 font-serif">
-        <div className="container mx-auto p-6 lg:px-0">
+        <div className="container mx-auto px-3 lg:px-0">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             {/* LEFT */}
             <div className="space-y-8">
@@ -180,11 +180,11 @@ const ContactPage = () => {
                 Get in Touch
               </p>
 
-              <h1 className="text-4xl font-bold tracking-tight">
+              <h1 className="text-3xl font-bold tracking-tight">
                 Contact Us
               </h1>
 
-              <p className="text-muted-foreground text-lg max-w-md">
+              <p className="text-muted-foreground  max-w-md">
                 We are available to discuss your property needs and provide professional advisory support.
               </p>
 
@@ -202,7 +202,7 @@ const ContactPage = () => {
   Icon: Mail,
   text: (
     <a
-      href="mailto:marksonajiboyeconsultingservic@gmail.com"
+      href="mailto:marksonajiboyeconsulting@gmail.com"
       className="text-muted-foreground hover:text-[#d09d1e] transition-colors"
     >
    marksonajiboyeconsulting@gmail.com
@@ -306,7 +306,7 @@ const ContactPage = () => {
       </section>
 
       {/* ===== GOOGLE MAP ===== */}
-      <section className=" px-6 pb-24">
+      <section className=" px-3 pb-24">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold text-[#0f172a] font-serif">
