@@ -202,7 +202,7 @@ const ContactPage = () => {
   Icon: Mail,
   text: (
     <a
-      href="mailto:marksonajiboyeconsulting@gmail.com"
+      href="mailto: marksonajiboyeconsulting@gmail.com"
       className="text-muted-foreground hover:text-[#d09d1e] transition-colors"
     >
    marksonajiboyeconsulting@gmail.com
@@ -333,7 +333,7 @@ const ContactPage = () => {
 
       {/* SUCCESS MODAL */}
       {showSuccess && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/50 backdrop-blur-sm">
+        <div className="fixed inset-0 flex items-center justify-center bg-black/50 backdrop-blur-sm">
           <div className="bg-white rounded-2xl p-10 max-w-sm w-full text-center shadow-[0_30px_80px_rgba(0,0,0,0.2)]">
             <CheckCircle2 className="w-16 h-16 text-[#d09d1e] mx-auto mb-4" />
             <h3 className="text-2xl font-bold mb-2">Message Sent</h3>
