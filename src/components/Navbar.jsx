@@ -34,7 +34,7 @@ const Navbar = () => {
           className=""
         >
           <div className="flex space-x-4 items-center">
-            <img src={logo} alt="Markson Ajiboye Logo" className="h-24 w-24 rounded-full mb-1" />
+            <img src={logo} alt="Markson Ajiboye Logo" className="w-20 h-20 rounded-full object-cover shadow-md  border-white"/>
           <div className="flex flex-col">
             <span className="text-xl font-bold tracking-tight text-[#0c1c2b]">
             Markson Ajiboye
