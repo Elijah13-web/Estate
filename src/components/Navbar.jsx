@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "../components/ui/button";
 import { Link, useLocation } from "react-router-dom";
-import logo from "../assets/icons/logo2.jpeg";
+import logo from "../assets/icons/logo.jpeg";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -34,12 +34,21 @@ const Navbar = () => {
           className=""
         >
           <div className="flex space-x-4 items-center">
-            <img src={logo} alt="Markson Ajiboye Logo" className="w-20 h-20 rounded-full object-cover shadow-md  border-white"/>
+           <img
+  src={logo}
+  alt="logo"
+  onClick={() =>
+    location.pathname === '/'
+      ? window.scrollTo({ top: 0, behavior: 'smooth' })
+      : (window.location.href = '/')
+  }
+  className="w-20 h-20 cursor-pointer object-contain bg-transparent"
+/>
           <div className="flex flex-col">
             <span className="text-xl font-bold tracking-tight text-[#0c1c2b]">
             Markson Ajiboye
           </span>
-          <span className="text-[10px] uppercase tracking-widest text-[#937723] font-semibold">
+          <span className="text-[10px] uppercase tracking-widest text-[#937723] font-semibold text-center">
             Consulting 
           </span>
           </div>
