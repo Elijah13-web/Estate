@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "../components/ui/button";
 import { Link, useLocation } from "react-router-dom";
-import logo from "../assets/icons/logo.jpeg";
+import logo from "../assets/icons/logo1.jpeg";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -33,7 +33,7 @@ const Navbar = () => {
           onClick={handleLogoClick}
           className=""
         >
-          <div className="flex space-x-4 items-center">
+          <div className="flex space-x-4 items-center ">
            <img
   src={logo}
   alt="logo"
@@ -42,7 +42,7 @@ const Navbar = () => {
       ? window.scrollTo({ top: 0, behavior: 'smooth' })
       : (window.location.href = '/')
   }
-  className="w-20 h-20 cursor-pointer object-contain bg-transparent"
+  className="w-20 h-20 cursor-pointer object-contain bg-transparent rounded-full"
 />
           <div className="flex flex-col">
             <span className="text-xl font-bold tracking-tight text-[#0c1c2b]">
