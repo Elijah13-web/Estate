@@ -72,7 +72,7 @@ const Footer = () => {
 
         <div className="border-t border-[#d7e6f0] mt-12 pt-8 text-center">
           <p className="text-xs text-[#d7e6f0]">
-            © {new Date().getFullYear()} Markson Ajiboye Consulting Services — Estate Surveyors, Valuers & Property Consultants. All rights reserved.
+            © {new Date().getFullYear()} Markson Ajiboye Consulting — Estate Surveyors, Valuers & Property Consultants. All rights reserved.
           </p>
         </div>
       </div>
