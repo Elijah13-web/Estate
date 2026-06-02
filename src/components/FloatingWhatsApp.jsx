@@ -1,7 +1,7 @@
 import { FaWhatsapp } from "react-icons/fa";
 
 export default function FloatingWhatsApp() {
-  const phoneNumber = "2348012345678"; // New WhatsApp number
+  const phoneNumber = "2347089651430 "; // New WhatsApp number
 
   const message =
     "Hello Markson Ajiboye Consulting. Estate Surveyors, Valuers, Property Consultants. I am interested in your services. Please provide more information.";
