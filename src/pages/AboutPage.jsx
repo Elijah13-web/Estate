@@ -10,7 +10,7 @@ const coreValues = [
 
 const AboutPage = () => {
   return (
-    <div className="min-h-screen bg-background pt-20 font-serif">
+    <div className="min-h-screen bg-background pt-20 font-serif container mx-auto">
       {/* Who We Are */}
       <section className="py-24">
         <div className="container mx-auto px-6 lg:px-8 max-w-4xl">

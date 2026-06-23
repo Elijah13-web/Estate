@@ -10,7 +10,7 @@ const reasons = [
 
 const HomeWhyUs = () => {
   return (
-    <section className="py-20 bg-[#0c1c2b] font-serif">
+    <section className="py-20 bg-[#0c1c2b] font-serif container mx-auto">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
           <p className="text-sm font-semibold uppercase tracking-widest text-[#937723] mb-4">Our Edge</p>
